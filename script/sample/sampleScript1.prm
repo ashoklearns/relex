@@ -1,0 +1,6 @@
+vm1:
+  type: linux
+vm2:
+  type: linux
+vars:
+  interval: 25

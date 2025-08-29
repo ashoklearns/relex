@@ -1,0 +1,47 @@
+mylinux1:
+  type: linux
+  distros: Ubuntu
+  name: mylinux1
+  ip: 192.168.10.11
+  port: "22"
+  user: user
+  password: user
+  prompt:
+    - ":~$"
+  location: lab1
+
+mylinux2:
+  type: linux
+  distros: CentOS
+  name: mylinux2
+  ip: 192.168.10.22
+  port: "22"
+  user: user
+  password: user
+  prompt:
+    - ":~$"
+  location: lab1
+
+mylinux3:
+  type: linux
+  distros: CentOS
+  name: mylinux3
+  ip: 192.168.10.33
+  port: "22"
+  user: user
+  password: user
+  prompt:
+    - ":~$"
+  location: lab1
+
+mylinux4:
+  type: linux
+  distros: CentOS
+  name: mylinux4
+  ip: 192.168.10.44
+  port: "22"
+  user: user
+  password: user
+  prompt:
+    - ":~$"
+  location: lab1
