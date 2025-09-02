@@ -1,5 +1,6 @@
 import logging
 import sys
+import re
 
 
 def initLogging(logFile="app.log", level="debug"):
@@ -54,3 +55,39 @@ def initLogging(logFile="app.log", level="debug"):
     # Add handlers to the root logger
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
+
+
+    ansi_escape = re.compile(
+    rb'''
+    \x1B\[ [0-?]* [ -/]* [@-~]      |
+    \x1B\] .*? (?:\x07|\x1B\\)      |
+    \x1B[@-Z\\-_]                   |  
+    \r                                
+    ''',
+    re.VERBOSE,
+    )
+    # Tee logger to log both to terminal and file
+    class teeLogger:
+        def __init__(self, logFile):
+            self.terminal = sys.stdout.buffer
+            self.log = open(logFile, "ab")
+            self.buffer = self
+
+        def write(self, message):
+            if isinstance(message, str):
+                data = message.encode()
+            else:
+                data = message
+            clean_data = ansi_escape.sub(b'', data)
+            self.terminal.write(data)
+            self.terminal.flush()
+            self.log.write(clean_data)
+            self.log.flush()
+
+        def flush(self):
+            self.terminal.flush()
+            self.log.flush()
+
+        def close(self):
+            self.log.close()
+    sys.stdout= teeLogger(logFile)
