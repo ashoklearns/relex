@@ -10,6 +10,7 @@ import os
 import pexpect
 import yaml
 import types
+import imp
 
 sys.dont_write_bytecode = True
 
@@ -658,3 +659,31 @@ def pause():
     Pause execution and open an interactive shell for debugging.
     """
     code.interact(local=globals())
+
+
+def lib(fnType, fnName, *args, **kwargs):
+    """
+    Dynamically invoke a function by name with arguments.
+    Args:
+        fnName: Name of the function to invoke.
+        fnType: Identifies the type of function.
+        *args: Positional arguments for the function.
+        **kwargs: Keyword arguments for the function.
+    Returns:
+        Result of the invoked function or None on error.
+    """
+    basepath = os.path.dirname(os.path.abspath(__file__))
+    if fnType == "util":
+        fnPath = basepath + "/../" + "utility" + "/" + fnName + ".py"
+    elif fnType == "wf":
+        fnPath = basepath + "/../" + "workflow" + "/" + fnName + ".py"
+    elif fnType == "func":
+        type = station[args[0]]["type"]
+        fnPath = basepath + "/../" + "func" + "/" + type + "/" + fnName + ".py"
+    try:
+        fnCall = imp.load_source(fnName, fnPath)
+    except IOError:
+        ERROR("Unable to find function in path - {}".format(fnPath))
+        return
+    tmpfunc = getattr(fnCall, fnName)
+    return tmpfunc(*args, **kwargs)

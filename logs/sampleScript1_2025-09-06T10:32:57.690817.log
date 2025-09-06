@@ -1,0 +1,106 @@
+2025-09-06 10:32:57,691 - relex - INFO - Log file: /home/user/git_code/relex/logs/sampleScript1_2025-09-06T10:32:57.690817.log
+2025-09-06 10:32:57,691 - relex - INFO - Station file: /home/user/git_code/relex/testbed/tb.yaml
+2025-09-06 10:32:57,691 - relex - INFO - Param file: /home/user/git_code/relex/script/sample/sampleScript1.prm
+2025-09-06 10:32:57,691 - relex - INFO - Log level: debug
+2025-09-06 10:32:57,698 - relex - DEBUG - Backup stations for 'vm1' are '['mylinux2', 'mylinux3', 'mylinux4']'
+2025-09-06 10:32:57,698 - relex - DEBUG - Backup stations for 'vm2' are '['mylinux3', 'mylinux4']'
+2025-09-06 10:32:57,698 - relex - INFO - *** Starting Execution Of Script - /home/user/git_code/relex/script/sample/sampleScript1.py ***
+user@192.168.10.11's password: 
+Last login: Sat Sep  6 10:31:31 2025 from 192.168.10.100
+user@vm1:~$ 
+user@vm1:~$ 2025-09-06 10:32:58,132 - relex - OK - Success in connecting to vm1
+user@192.168.10.22's password: 
+Last login: Sat Sep  6 10:31:31 2025 from 192.168.10.100
+user@vm2:~$ 
+user@vm2:~$ 2025-09-06 10:32:58,545 - relex - OK - Success in connecting to vm2
+2025-09-06 10:32:58,545 - relex - OK - Setup step 1
+2025-09-06 10:32:58,545 - relex - OK - Setup step 2
+2025-09-06 10:32:58,547 - relex - INFO - +++ Starting Execution Of Test1 +++
+25
+/home/user/git_code/relex/script/sample
+Basepath: /home/user/git_code/relex/lib/infra
+ls -lart
+total 52
+-rw-r--r-- 1 user user  807 Feb 25  2020 .profile
+-rw-r--r-- 1 user user 3771 Feb 25  2020 .bashrc
+-rw-r--r-- 1 user user  220 Feb 25  2020 .bash_logout
+drwxr-xr-x 3 root root 4096 Nov 13  2023 ..
+drwx------ 2 user user 4096 Nov 13  2023 .ssh
+-rw-r--r-- 1 user user    0 Nov 13  2023 .sudo_as_admin_successful
+drwxrwxr-x 3 user user 4096 Jan 14  2025 .kube
+drwx------ 4 user user 4096 Jan 14  2025 .config
+drwx------ 3 user user 4096 Jan 14  2025 .cache
+-rw------- 1 user user 3654 Aug 16 06:53 .viminfo
+-rw------- 1 user user  196 Aug 27 06:06 .Xauthority
+drwxr-xr-x 6 user user 4096 Aug 27 06:06 .
+-rw------- 1 user user 6981 Aug 27 06:20 .bash_history
+user@vm1:~$ 2025-09-06 10:32:58,607 - relex - OK - File bashrc exists in vm1
+2025-09-06 10:32:58,607 - relex - OK - Test 1, step 1
+2025-09-06 10:32:58,608 - relex - OK - Test 1, clean 1
+2025-09-06 10:32:58,609 - relex - INFO - +++ Ending Execution Of Test1 +++
+2025-09-06 10:32:58,610 - relex - INFO - +++ Starting Execution Of Test2 +++
+25
+ls -lart
+total 44
+-rw-r--r-- 1 user user  807 Feb 25  2020 .profile
+-rw-r--r-- 1 user user 3771 Feb 25  2020 .bashrc
+-rw-r--r-- 1 user user  220 Feb 25  2020 .bash_logout
+drwxr-xr-x 3 root root 4096 Nov 13  2023 ..
+drwx------ 2 user user 4096 Nov 13  2023 .ssh
+drwx------ 2 user user 4096 Nov 13  2023 .cache
+-rw-r--r-- 1 user user    0 Nov 13  2023 .sudo_as_admin_successful
+drwxrwxr-x 2 user user 4096 Jan 14  2025 .kube
+-rw------- 1 user user  196 Aug 27 06:19 .Xauthority
+drwxr-xr-x 5 user user 4096 Aug 27 06:19 .
+-rw------- 1 user user 4822 Sep  6 10:31 .bash_history
+user@vm2:~$ 2025-09-06 10:32:58,667 - relex - OK - File bashrc exists in vm2
+2025-09-06 10:32:58,667 - relex - OK - Test 2, step 1
+pwd
+/home/user
+user@vm2:~$ 2025-09-06 10:32:58,722 - relex - OK - pwd command executed successfully in vm2
+2025-09-06 10:32:58,722 - relex - OK - Test 2, step 2
+2025-09-06 10:32:58,723 - relex - OK - Test 2, clean 2
+2025-09-06 10:32:58,723 - relex - OK - Test 2, clean 1
+2025-09-06 10:32:58,724 - relex - INFO - +++ Ending Execution Of Test2 +++
+2025-09-06 10:32:58,724 - relex - OK - Setup clean 2
+2025-09-06 10:32:58,827 - relex - OK - Success in closing vm1
+2025-09-06 10:32:58,928 - relex - OK - Success in closing vm2
+2025-09-06 10:32:58,929 - relex - OK - Setup clean 1
+2025-09-06 10:32:58,929 - relex - INFO - *** Ending Script Execution ***
+
+
+====================================================================================================
+                                                     Execution Summary
+====================================================================================================
+2025-09-06 10:32:57,698 - [DEBUG] - Backup stations for 'vm1' are '['mylinux2', 'mylinux3', 'mylinux4']'
+2025-09-06 10:32:57,698 - [DEBUG] - Backup stations for 'vm2' are '['mylinux3', 'mylinux4']'
+2025-09-06 10:32:57,699 - [INFO] - *** Starting Execution Of Script - /home/user/git_code/relex/script/sample/sampleScript1.py ***
+2025-09-06 10:32:58,132 - [OK] - Success in connecting to vm1
+2025-09-06 10:32:58,545 - [OK] - Success in connecting to vm2
+2025-09-06 10:32:58,545 - [OK] - Setup step 1
+2025-09-06 10:32:58,546 - [OK] - Setup step 2
+2025-09-06 10:32:58,547 - [INFO] - +++ Starting Execution Of Test1 +++
+2025-09-06 10:32:58,607 - [OK] - File bashrc exists in vm1
+2025-09-06 10:32:58,607 - [OK] - Test 1, step 1
+2025-09-06 10:32:58,608 - [OK] - Test 1, clean 1
+2025-09-06 10:32:58,609 - [INFO] - +++ Ending Execution Of Test1 +++
+2025-09-06 10:32:58,611 - [INFO] - +++ Starting Execution Of Test2 +++
+2025-09-06 10:32:58,667 - [OK] - File bashrc exists in vm2
+2025-09-06 10:32:58,667 - [OK] - Test 2, step 1
+2025-09-06 10:32:58,722 - [OK] - pwd command executed successfully in vm2
+2025-09-06 10:32:58,723 - [OK] - Test 2, step 2
+2025-09-06 10:32:58,723 - [OK] - Test 2, clean 2
+2025-09-06 10:32:58,724 - [OK] - Test 2, clean 1
+2025-09-06 10:32:58,724 - [INFO] - +++ Ending Execution Of Test2 +++
+2025-09-06 10:32:58,725 - [OK] - Setup clean 2
+2025-09-06 10:32:58,827 - [OK] - Success in closing vm1
+2025-09-06 10:32:58,928 - [OK] - Success in closing vm2
+2025-09-06 10:32:58,929 - [OK] - Setup clean 1
+2025-09-06 10:32:58,929 - [INFO] - *** Ending Script Execution ***
+====================================================================================================
+====================================================================================================
++----------------------------------------------------+
+|          Total Number Of Test Passed = 2           |
+|          Total Number Of Test Failed = 0           |
+|                 Script has Passed!                 |
++----------------------------------------------------+

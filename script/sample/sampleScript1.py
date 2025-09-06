@@ -37,9 +37,9 @@ def testSetup():
 
 def Test1():
     #STEP - Test Step 1
-    print(param["vars"]["interval"])
-    output = command(vm1h, "ls -lart", "\$")
-    if re.search("bashrc" , output):
+    print(param["vars"]["x"])
+    output = lib("func", "checkFile", vm1h, "bashrc")
+    if output["result"] == "ok":
         OK("File bashrc exists in vm1")
     else:
         FAIL("File bashrc does not exist in vm1")
@@ -50,7 +50,7 @@ def Test1():
 
 def Test2():
     #STEP - Test Step 1
-    print(param["vars"]["interval"])
+    print(param["vars"]["x"])
     output = command(vm2h, "ls -lart", "\$")
     if re.search("bashrc" , output):
         OK("File bashrc exists in vm2")

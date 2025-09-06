@@ -3,4 +3,4 @@ vm1:
 vm2:
   type: linux
 vars:
-  interval: 25
+  x: 25
