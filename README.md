@@ -22,6 +22,14 @@ With **RELEX**, you can drop into **interpreter mode** at any point in your scri
 Matrix-style test cases often share common steps but differ in a few variations.  
 **RELEX** supports a **setup function** where shared steps run once, while test-specific steps are isolated in their respective test cases. This reduces duplication and improves maintainability.  
 
+### 🧩 Function-Based Script Design  
+Scripts in **RELEX** are created as **sets of reusable functions**.  
+If two different Devices Under Test (DUTs) share similar functionality, the same script can be reused by simply creating DUT-specific function definitions.  
+This approach makes it:  
+- Easy to **organize** automation scripts  
+- Simple to **reuse and extend** across multiple DUTs  
+- Maintainable in the long run, reducing code duplication
+
 ### 📜 Transparent Logging  
 Stay in control with **real-time console logs** and **detailed log files**. At the end of execution, a clear **summary report** highlights key results, saving you from manual log digging.  
 
@@ -32,7 +40,8 @@ Stay in control with **real-time console logs** and **detailed log files**. At t
 - Stable and resilient regression runs  
 - Cleaner automation with enforced cleanup  
 - Interactive debugging on the fly  
-- Optimized multi-test execution  
+- Optimized multi-test execution
+- Function-based scripting for reuse and maintainability
 - Clear and transparent reporting  
 
 ---
