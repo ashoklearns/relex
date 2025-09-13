@@ -48,4 +48,29 @@ Stay in control with **real-time console logs** and **detailed log files**. At t
 
 ## 📖 Getting Started  
 
-_Coming soon: installation and usage examples._  
+## 🚀 Setup Instructions
+
+Follow these steps to set up the project on your machine:
+
+### 1. Clone the Repository
+```bash
+git clone git@github.com:ashokngit/relex.git
+```
+### 2. Navigate into the Project Directory
+```bash
+cd relex
+```
+### 3. Configure Environment Variable
+Add the project’s lib/infra folder to your PYTHONPATH so Python can locate the modules:
+```bash
+echo "export PYTHONPATH=$PWD/lib/infra" >> ~/.bash_profile
+```
+### 4. Reload Your Shell Configuration
+To apply the changes immediately without reboot:
+```bash
+source ~/.bash_profile
+```
+
+✅ After completing these steps, your environment will be ready to run the script.
+
+_Coming soon: usage examples._  
