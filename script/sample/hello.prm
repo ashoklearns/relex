@@ -1,0 +1,2 @@
+vars:
+    msg: "I am a variable used in script"

@@ -13,7 +13,7 @@ def testArgs():
     logFileName = scriptname + "_" + suffix + ".log"
     logFileName = os.path.expanduser("~/git_code/relex/logs/" + logFileName)
     paramFileName = scriptpath + ".prm"
-    defaultStation = os.path.expanduser("~/git_code/relex/testbed/tb.yaml")
+    defaultStation = os.path.expanduser("~/git_code/relex/testbed/sampletb.yaml")
     parser.add_argument(
         "-logfile", help="File to store execution log", default=logFileName
     )

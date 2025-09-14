@@ -1,6 +1,6 @@
 import relex
 
-def testSetup():
+def Setup():
     #STEP - Sample step 1
     output = connect(vm1, "ssh")
     if output["result"] == "ok":
@@ -72,4 +72,4 @@ def Test2():
     #CLEAN - Test Clean 1
     OK("Test 2, clean 2")
 
-relex.testExec(testSetup, Test1, Test2)
+relex.testExec(Setup, Test1, Test2)
