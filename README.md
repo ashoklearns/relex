@@ -175,7 +175,7 @@ relex.testExec(Setup, Test)
 * ```OK("Hello, World", "TestCase")``` - The `"TestCase"` label indicates the **deciding step** of the test execution.  
                                          This is the step whose outcome determines whether the entire **Test** is marked as **Passed** or **Failed**.
 
-### Example: Hello World param file
+### Example: Hello World Param
  This param file is created in the same directory as script with name same as script but with extension .prm
 hello.prm
 ```yaml
