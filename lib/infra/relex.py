@@ -1,3 +1,11 @@
+############################################################################
+#
+#    Framework core library - relex.py
+#
+#    Creator: Ashok Natarajan - ashnatar@gmail.com
+#
+############################################################################
+
 import sys
 import inspect
 import logging
