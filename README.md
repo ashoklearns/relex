@@ -193,11 +193,16 @@ python3 hello.py
 ### Example Execution Output
 
 ```code
+user@vm:~/git_code/relex/script/sample$ python3 hello.py 
 2025-09-14 12:14:25,337 - relex - INFO - Log file: /home/user/git_code/relex/logs/hello_2025-09-14T12:14:25.336452.log
+2025-09-14 12:14:25,338 - relex - INFO - Station file: /home/user/git_code/relex/testbed/sampletb.yaml
+2025-09-14 12:14:25,338 - relex - INFO - Param file: /home/user/git_code/relex/script/sample/hello.prm
+2025-09-14 12:14:25,338 - relex - INFO - Log level: debug
 2025-09-14 12:14:25,348 - relex - INFO - *** Starting Execution Of Script - /home/user/git_code/relex/script/sample/hello.py ***
 2025-09-14 12:14:25,358 - relex - OK - Setup step 1
 2025-09-14 12:14:25,359 - relex - OK - Setup step 2
 2025-09-14 12:14:25,361 - relex - INFO - +++ Starting Execution Of Test +++
+2025-09-14 12:14:25,361 - relex - INFO - This is a variable i defined in param file: I am a variable used in script
 2025-09-14 12:14:25,362 - relex - OK - Test step 1
 2025-09-14 12:14:25,363 - relex - OK - Hello, World
 2025-09-14 12:14:25,365 - relex - OK - Test clean 2
@@ -205,7 +210,8 @@ python3 hello.py
 2025-09-14 12:14:25,366 - relex - INFO - +++ Ending Execution Of Test +++
 2025-09-14 12:14:25,366 - relex - OK - Setup clean 2
 2025-09-14 12:14:25,367 - relex - OK - Setup clean 1
-2025-09-14 12:14:25,368 - relex - INFO - *** Ending Script Execution ***
+2025-09-14 12:14:25,367 - relex - INFO - *** Ending Script Execution ***
+
 
 ====================================================================================================
                                                      Execution Summary
@@ -214,6 +220,7 @@ python3 hello.py
 2025-09-14 12:14:25,359 - [OK] - Setup step 1
 2025-09-14 12:14:25,360 - [OK] - Setup step 2
 2025-09-14 12:14:25,361 - [INFO] - +++ Starting Execution Of Test +++
+2025-09-14 12:14:25,362 - [INFO] - This is a variable i defined in param file: I am a variable used in script
 2025-09-14 12:14:25,363 - [OK] - Test step 1
 2025-09-14 12:14:25,364 - [OK] - Hello, World
 2025-09-14 12:14:25,366 - [OK] - Test clean 2
@@ -223,11 +230,13 @@ python3 hello.py
 2025-09-14 12:14:25,367 - [OK] - Setup clean 1
 2025-09-14 12:14:25,368 - [INFO] - *** Ending Script Execution ***
 ====================================================================================================
+====================================================================================================
 +----------------------------------------------------+
 |          Total Number Of Test Passed = 1           |
 |          Total Number Of Test Failed = 0           |
 |                 Script has Passed!                 |
 +----------------------------------------------------+
+user@vm:~/git_code/relex/script/sample$ 
 ```
 
 ### Understanding Execution Flow
