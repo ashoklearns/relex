@@ -54,7 +54,7 @@ Follow these steps to set up the project on your machine:
 
 ### 1. Clone the Repository
 ```bash
-git clone git@github.com:ashokngit/relex.git
+git clone git@github.com:ashoklearns/relex.git
 ```
 ### 2. Navigate into the Project Directory
 ```bash
